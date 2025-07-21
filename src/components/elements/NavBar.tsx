@@ -8,7 +8,7 @@ const NavBar: React.FC = () => (
     <header className="header">
       <div className="header-content">
         <Link href="/" className="logo">
-          <img src="/logo.png" alt="Multiple Accounts Logo" />
+          <img src="/logo.png" alt="Random Letter Logo" />
           <span className="logo-text">Random Letter Generator</span>
         </Link>
         
