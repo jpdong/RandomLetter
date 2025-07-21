@@ -25,7 +25,6 @@ const ContactUsPage: React.FC = () => {
           <p style={{ marginBottom: '3rem', fontSize: '1.2rem' }}>
             We'd love to hear from you! Reach out through any of these channels:
           </p>
-          <a href="https://link.zhihu.com/?target=https%3A//multirun.space/"> </a>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem', maxWidth: '1200px', margin: '0 auto' }}>   
             
             <ContactCard
