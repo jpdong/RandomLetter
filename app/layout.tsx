@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Random Letter Generator - Free Online Tool',
   description: 'Generate random letters with our free online tool. Customize case, quantity, and excluded letters. Perfect for word games, teaching, and creative projects.',
   icons: {
-    icon: '/logo.webp',
+    icon: '/logo.png',
   },
   
   alternates: {

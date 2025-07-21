@@ -8,7 +8,7 @@ const NavBar: React.FC = () => (
     <header className="header">
       <div className="header-content">
         <Link href="/" className="logo">
-          <img src="/logo.webp" alt="Multiple Accounts Logo" />
+          <img src="/logo.png" alt="Multiple Accounts Logo" />
           <span className="logo-text">Random Letter Generator</span>
         </Link>
         
@@ -36,7 +36,7 @@ const NavBar: React.FC = () => (
     <nav className="mobile-nav">
       <div className="mobile-nav-header">
         <Link href="/" className="logo">
-          <img src="/logo.webp" alt="Random Letter Logo" width="32" height="32" />
+          <img src="/logo.png" alt="Random Letter Logo" width="32" height="32" />
           <span className="logo-text">Random Letter Generator</span>
         </Link>
         <label htmlFor="mobile-menu-toggle" className="mobile-nav-close" aria-label="Close mobile menu">
