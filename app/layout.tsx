@@ -5,17 +5,14 @@ import GoogleAnalytics from '../src/components/analytics/GoogleAnalytics'
 import CookieConsent from '../src/components/analytics/CookieConsent'
 
 export const metadata: Metadata = {
-  title: 'Multi Run - Parallel Dual App',
-  description: 'Multi Run​​ is a powerful tool that allows you to run multiple accounts or applications simultaneously on a single device.',
-  keywords: 'Multi Run,Parallel Space,Dual App,Multiple Accounts,Cloner,Virtual',
+  title: 'Random Letter Generator - Free Online Tool',
+  description: 'Generate random letters with our free online tool. Customize case, quantity, and excluded letters. Perfect for word games, teaching, and creative projects.',
   icons: {
     icon: '/logo.webp',
   },
-  other: {
-    "saashub-verification":"8myrsab5uhvd"
-  },
+  
   alternates: {
-      canonical: `https://multirun.space/`,
+      canonical: `https://randomletter.net/`,
     },
   
 }

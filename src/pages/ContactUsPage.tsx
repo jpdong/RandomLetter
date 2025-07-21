@@ -27,36 +27,14 @@ const ContactUsPage: React.FC = () => {
           </p>
           <a href="https://link.zhihu.com/?target=https%3A//multirun.space/"> </a>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '2rem', maxWidth: '1200px', margin: '0 auto' }}>   
-            <ContactCard
-              icon={<FaTelegram />}
-              title="Telegram Channel"
-              link="https://t.me/multi_run"
-              value="https://t.me/multi_run"
-            />
-            <ContactCard
-              icon={<FaTelegram />}
-              title="Telegram Group"
-              link="https://t.me/+m8gMGEhAb5E0ODk1"
-              value="https://t.me/+m8gMGEhAb5E0ODk1"
-            />
-            <ContactCard
-              icon={<FaDiscord />}
-              title="Discord"
-              link="https://discord.gg/T7DsKkdz"
-              value="https://discord.gg/T7DsKkdz"
-            />
+            
             <ContactCard
               icon={<FaTwitter />}
               title="Twitter"
               link="https://x.com/JP_DONG"
               value="https://x.com/JP_DONG"
             />
-            <ContactCard
-              icon={<FaProductHunt />}
-              title="ProductHunt"
-              link="https://www.producthunt.com/@jumpdong"
-              value="https://www.producthunt.com/@jumpdong"
-            />
+            
             <ContactCard
               icon={<FaEnvelope />}
               title="Email"

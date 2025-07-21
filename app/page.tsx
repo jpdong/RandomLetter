@@ -1,5 +1,5 @@
-import MultipleAccountsPage from '../src/pages/MultipleAccountsPage'
+import RandomLetterPage from '../src/pages/RandomLetterPage'
 
 export default function Home() {
-  return <MultipleAccountsPage />
+  return <RandomLetterPage />
 }

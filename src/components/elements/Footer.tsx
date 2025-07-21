@@ -6,13 +6,12 @@ const Footer: React.FC = () => (
     <div className="container">
       <div className="row">
         <div className="col col-4">
-          <h3>Multi Run</h3>
-          <p>Run multiple accounts and apps simultaneously on one device with complete data isolation.</p>
+          <h3>Random Letter Generator</h3>
+          <p>Generate random letters with customizable options for games, teaching, creative projects, and more. Simple, fast, and free to use!</p>
         </div>
         <div className="col col-4">
           <h3>Products</h3>
           <ul>
-            <li><Link href="/">Download</Link></li>
             <li><Link href="/contact">Contact Us</Link></li>
           </ul>
         </div>
@@ -25,7 +24,7 @@ const Footer: React.FC = () => (
         </div>
       </div>
       <div className="footer-bottom">
-        &copy; 2024 Multi Run. All rights reserved.
+        &copy; 2025 Random Letter. All rights reserved.
       </div>
     </div>
   </footer>

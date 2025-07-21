@@ -9,15 +9,12 @@ const NavBar: React.FC = () => (
       <div className="header-content">
         <Link href="/" className="logo">
           <img src="/logo.webp" alt="Multiple Accounts Logo" />
-          <span className="logo-text">Multi Run</span>
+          <span className="logo-text">Random Letter Generator</span>
         </Link>
         
         <nav>
           <ul className="nav">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/hot-apps">Hot Apps</Link></li>
-            <li><Link href="/hot-games">Hot Games</Link></li>
-            <li><Link href="/technology">Technology</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </nav>
@@ -28,7 +25,7 @@ const NavBar: React.FC = () => (
           <span></span>
         </label>
 
-        <a href="/#download" className="btn">Download Now</a>
+       
       </div>
     </header>
 
@@ -39,8 +36,8 @@ const NavBar: React.FC = () => (
     <nav className="mobile-nav">
       <div className="mobile-nav-header">
         <Link href="/" className="logo">
-          <img src="/logo.webp" alt="Multiple Accounts Logo" width="32" height="32" />
-          <span className="logo-text">Multi Run</span>
+          <img src="/logo.webp" alt="Random Letter Logo" width="32" height="32" />
+          <span className="logo-text">Random Letter Generator</span>
         </Link>
         <label htmlFor="mobile-menu-toggle" className="mobile-nav-close" aria-label="Close mobile menu">
           ×
@@ -48,9 +45,6 @@ const NavBar: React.FC = () => (
       </div>
       <ul>
         <li><Link href="/">Home</Link></li>
-        <li><Link href="/hot-apps">Hot Apps</Link></li>
-        <li><Link href="/hot-games">Hot Games</Link></li>
-        <li><Link href="/technology">Technology</Link></li>
         <li><Link href="/contact">Contact</Link></li>
       </ul>
     </nav>
