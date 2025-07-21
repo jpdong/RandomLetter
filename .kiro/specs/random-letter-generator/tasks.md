@@ -64,3 +64,8 @@
   - Write tests for the letter generation logic
   - Test edge cases and error handling
   - _Requirements: 1.2, 1.3, 1.4, 1.5_
+
+- [ ] 7. Refactor for server-side rendering
+  - Extract interactive components from RandomLetterPage into separate client components
+  - Ensure RandomLetterPage can be server-rendered
+  - _Requirements: 1.1, 4.1, 4.2, 4.3_

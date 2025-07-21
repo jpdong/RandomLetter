@@ -1,42 +1,13 @@
-"use client"
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import NavBar from '../components/elements/NavBar';
 import Footer from '../components/elements/Footer';
-import FeatureCard from '../components/elements/FeatureCard';
 import TestimonialCard from '../components/elements/TestimonialCard';
 import SectionTitle from '../components/elements/SectionTitle';
 import Container from '../components/layout/Container';
 import Row from '../components/layout/Row';
 import Column from '../components/layout/Column';
-import RandomLetterGenerator from '../components/random-letter/RandomLetterGenerator';
-import HotArea from './HotArea';
+import ResponsiveHero from '../components/random-letter/client/ResponsiveHero'
 
-const features = [
-  {
-    img: '/random_letter_1.webp',
-    title: 'Customizable Generation',
-    alt: 'Random Letter Generator Customization',
-    desc: 'Generate random letters with options for case, quantity, and specific letter exclusions.',
-  },
-  {
-    img: '/random_letter_2.webp',
-    title: 'Easy Copy & Paste',
-    alt: 'Copy Random Letters',
-    desc: 'Quickly copy generated letters to clipboard for use in your projects or games.',
-  },
-  {
-    img: '/random_letter_3.webp',
-    title: 'Multiple Use Cases',
-    alt: 'Random Letter Applications',
-    desc: 'Perfect for word games, teaching activities, creative projects, and more.',
-  },
-  {
-    img: '/random_letter_4.webp',
-    title: 'User-Friendly Interface',
-    alt: 'Easy to Use Random Letter Tool',
-    desc: 'Simple and intuitive controls make generating random letters quick and easy.',
-  },
-];
 
 const faqs = [
   {
@@ -81,111 +52,71 @@ const testimonials = [
 ];
 
 const RandomLetterPage: React.FC = () => {
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-  
-  useEffect(() => {
-    const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    
-    checkIfMobile();
-    window.addEventListener('resize', checkIfMobile);
-    
-    return () => {
-      window.removeEventListener('resize', checkIfMobile);
-    };
-  }, []);
-  
   return (
-  <>
-    <NavBar />
-    <div style={{ background: '#f7f9fb', minHeight: '100vh' }}>
-      {/* Hero Section */}
-      <Container>
-        <Row gutter={[40, 40]} align="middle" style={{ padding: '80px 0 40px 0' }}>
-          <Column xs={24} md={12}>
-            <h1 style={{ 
-              fontSize: isMobile ? '2rem' : '2.5rem', 
-              marginBottom: 20, 
-              color: '#2c3e50',
-              textAlign: isMobile ? 'center' : 'left'
-            }}>
-              Random Letter Generator
-            </h1>
-            <p style={{ 
-              fontSize: isMobile ? '1rem' : '1.1rem', 
-              marginBottom: 30, 
-              color: '#666',
-              textAlign: isMobile ? 'center' : 'left'
-            }}>
-              Generate random letters with customizable options for games, teaching, creative projects, and more. Simple, fast, and free to use!
-            </p>
-          </Column>
-          <Column xs={24} md={12}>
-            <RandomLetterGenerator />
-          </Column>
-        </Row>
-      </Container>
-      
-      
-      {/* Use Cases Section */}
-      <div style={{ padding: '80px 0' }} id="use-cases">
-        <Container>
-          <SectionTitle>How to Use Random Letters</SectionTitle>
-          <Row gutter={[30, 30]}>
-            <Column xs={24} md={8}>
-              <div style={{ background: '#fff', padding: '25px', borderRadius: '10px', height: '100%', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
-                <h3 style={{ color: '#2c3e50', marginBottom: '15px' }}>Word Games</h3>
-                <p>Challenge yourself with word games like Scrabble, Boggle, or Word Jumble using randomly generated letters. Great for improving vocabulary and having fun!</p>
-              </div>
-            </Column>
-            <Column xs={24} md={8}>
-              <div style={{ background: '#fff', padding: '25px', borderRadius: '10px', height: '100%', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
-                <h3 style={{ color: '#2c3e50', marginBottom: '15px' }}>Education</h3>
-                <p>Teachers can use random letters for alphabet learning, spelling exercises, vocabulary building, and creative writing prompts in the classroom.</p>
-              </div>
-            </Column>
-            <Column xs={24} md={8}>
-              <div style={{ background: '#fff', padding: '25px', borderRadius: '10px', height: '100%', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
-                <h3 style={{ color: '#2c3e50', marginBottom: '15px' }}>Creative Projects</h3>
-                <p>Use random letters for art projects, design work, creating unique codes, or as inspiration for creative writing and storytelling.</p>
-              </div>
-            </Column>
-          </Row>
-        </Container>
-      </div>
-      
-      {/* FAQ Section */}
-      <div style={{ background: '#fff', padding: '80px 0' }} id="faq">
-        <Container>
-          <SectionTitle>Frequently Asked Questions</SectionTitle>
-          <div style={{ maxWidth: 800, margin: '0 auto' }}>
-            {faqs.map(f => (
-              <div key={f.question} style={{ marginBottom: 30, padding: 20, background: '#f9f9f9', borderRadius: 10 }}>
-                <h3 style={{ color: '#2c3e50', marginBottom: 10 }}>{f.question}</h3>
-                <p style={{ color: '#666', margin: 0 }}>{f.answer}</p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </div>
-      
-      {/* Testimonials Section */}
-      <div style={{ background: '#f9f9f9', padding: '80px 0' }} id="testimonials">
-        <Container>
-          <SectionTitle>What Users Say About Our Random Letter Generator</SectionTitle>
-          <Row gutter={[30, 30]}>
-            {testimonials.map(t => (
-              <Column xs={24} md={12} lg={6} key={t.name}>
-                <TestimonialCard {...t} />
+    <>
+      <NavBar />
+      <div style={{ background: '#f7f9fb', minHeight: '100vh' }}>
+        {/* Hero Section */}
+        <ResponsiveHero />
+
+        {/* Use Cases Section */}
+        <div style={{ padding: '80px 0' }} id="use-cases">
+          <Container>
+            <SectionTitle>How to Use Random Letters</SectionTitle>
+            <Row gutter={[30, 30]}>
+              <Column xs={24} md={8}>
+                <div style={{ background: '#fff', padding: '25px', borderRadius: '10px', height: '100%', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
+                  <h3 style={{ color: '#2c3e50', marginBottom: '15px' }}>Word Games</h3>
+                  <p>Challenge yourself with word games like Scrabble, Boggle, or Word Jumble using randomly generated letters. Great for improving vocabulary and having fun!</p>
+                </div>
               </Column>
-            ))}
-          </Row>
-        </Container>
-      </div>   
-    </div>
-    <Footer />
-  </>
+              <Column xs={24} md={8}>
+                <div style={{ background: '#fff', padding: '25px', borderRadius: '10px', height: '100%', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
+                  <h3 style={{ color: '#2c3e50', marginBottom: '15px' }}>Education</h3>
+                  <p>Teachers can use random letters for alphabet learning, spelling exercises, vocabulary building, and creative writing prompts in the classroom.</p>
+                </div>
+              </Column>
+              <Column xs={24} md={8}>
+                <div style={{ background: '#fff', padding: '25px', borderRadius: '10px', height: '100%', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
+                  <h3 style={{ color: '#2c3e50', marginBottom: '15px' }}>Creative Projects</h3>
+                  <p>Use random letters for art projects, design work, creating unique codes, or as inspiration for creative writing and storytelling.</p>
+                </div>
+              </Column>
+            </Row>
+          </Container>
+        </div>
+
+        {/* FAQ Section */}
+        <div style={{ background: '#fff', padding: '80px 0' }} id="faq">
+          <Container>
+            <SectionTitle>Frequently Asked Questions</SectionTitle>
+            <div style={{ maxWidth: 800, margin: '0 auto' }}>
+              {faqs.map(f => (
+                <div key={f.question} style={{ marginBottom: 30, padding: 20, background: '#f9f9f9', borderRadius: 10 }}>
+                  <h3 style={{ color: '#2c3e50', marginBottom: 10 }}>{f.question}</h3>
+                  <p style={{ color: '#666', margin: 0 }}>{f.answer}</p>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </div>
+
+        {/* Testimonials Section */}
+        <div style={{ background: '#f9f9f9', padding: '80px 0' }} id="testimonials">
+          <Container>
+            <SectionTitle>What Users Say About Our Random Letter Generator</SectionTitle>
+            <Row gutter={[30, 30]}>
+              {testimonials.map(t => (
+                <Column xs={24} md={12} lg={6} key={t.name}>
+                  <TestimonialCard {...t} />
+                </Column>
+              ))}
+            </Row>
+          </Container>
+        </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 
