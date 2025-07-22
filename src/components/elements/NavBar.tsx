@@ -4,17 +4,18 @@ import Link from 'next/link';
 const NavBar: React.FC = () => (
   <>
     <input type="checkbox" id="mobile-menu-toggle" className="mobile-menu-checkbox" />
-    
+
     <header className="header">
       <div className="header-content">
         <Link href="/" className="logo">
           <img src="/logo.png" alt="Random Letter Logo" />
           <span className="logo-text">Random Letter Generator</span>
         </Link>
-        
+
         <nav>
           <ul className="nav">
             <li><Link href="/">Home</Link></li>
+            <li><Link href="/random-name-generator">Random Names</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </nav>
@@ -25,7 +26,7 @@ const NavBar: React.FC = () => (
           <span></span>
         </label>
 
-       
+
       </div>
     </header>
 
@@ -45,6 +46,7 @@ const NavBar: React.FC = () => (
       </div>
       <ul>
         <li><Link href="/">Home</Link></li>
+        <li><Link href="/random-name-generator">Random Names</Link></li>
         <li><Link href="/contact">Contact</Link></li>
       </ul>
     </nav>
