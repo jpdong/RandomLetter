@@ -17,6 +17,7 @@ const NavBar: React.FC = () => (
             <li><Link href="/">Home</Link></li>
             <li><Link href="/random-name-generator">Random Names</Link></li>
             <li><Link href="/yes-no-wheel">Yes/No Wheel</Link></li>
+            <li><Link href="/glitch-text-generator">Glitch Text Generator</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </nav>
@@ -49,6 +50,7 @@ const NavBar: React.FC = () => (
         <li><Link href="/">Home</Link></li>
         <li><Link href="/random-name-generator">Random Names</Link></li>
         <li><Link href="/yes-no-wheel">Yes/No Wheel</Link></li>
+        <li><Link href="/glitch-text-generator">Glitch Text Generator</Link></li>
         <li><Link href="/contact">Contact</Link></li>
       </ul>
     </nav>

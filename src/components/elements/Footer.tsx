@@ -12,6 +12,9 @@ const Footer: React.FC = () => (
         <div className="col col-4">
           <h3>Products</h3>
           <ul>
+            <li><Link href="/random-name-generator">Random Names</Link></li>
+            <li><Link href="/yes-no-wheel">Yes/No Wheel</Link></li>
+            <li><Link href="/glitch-text-generator">Glitch Text Generator</Link></li>
             <li><Link href="/contact">Contact Us</Link></li>
           </ul>
         </div>
