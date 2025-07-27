@@ -18,10 +18,10 @@ const YesNoWheel: React.FC<WheelProps> = ({ size = 300 }) => {
     const checkIfMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkIfMobile();
     window.addEventListener('resize', checkIfMobile);
-    
+
     return () => {
       window.removeEventListener('resize', checkIfMobile);
     };
@@ -29,37 +29,59 @@ const YesNoWheel: React.FC<WheelProps> = ({ size = 300 }) => {
 
   const spinWheel = () => {
     if (spinning) return;
-    
+
     // Reset result
     setResult(null);
-    
+
     // Start spinning
     setSpinning(true);
-    
+
     // Generate a random number of rotations (3-6 full rotations)
-    const rotations = 3 + Math.random() * 3;
-    
+    const rotations = Math.round(3 + Math.random() * 3);
+    console.log("dong rotations:", rotations)
     // Generate a random additional angle (0-359 degrees)
     const extraAngle = Math.floor(Math.random() * 360);
-    
+    //const extraAngle = 0;
+    console.log("dong extraAngle:", extraAngle)
     // Calculate total rotation in degrees
     const totalRotation = rotations * 360 + extraAngle;
-    
+
+    // Calculate the new total rotation
+    const newTotalRotation = rotation + totalRotation;
+
     // Set the new rotation
-    setRotation(rotation + totalRotation);
-    
+    setRotation(newTotalRotation);
+
     // Determine the result after spinning
     setTimeout(() => {
       // The wheel has 2 sectors (Yes and No)
       // Each sector is 180 degrees
-      // Yes: 0-180 degrees (top half)
-      // No: 180-360 degrees (bottom half)
-      
+      // YES: top half (0-180 degrees from initial position)
+      // NO: bottom half (180-360 degrees from initial position)
+
       // Calculate the final position (normalized to 0-360)
-      const finalPosition = (rotation + totalRotation) % 360;
-      
+      // We need to be precise about the final angle
+      const finalAngle = newTotalRotation % 360;
+
+      // Normalize to ensure we have a positive angle
+      const normalizedAngle = finalAngle < 0 ? finalAngle + 360 : finalAngle;
+
+      // The pointer is at the top (0 degrees), so we check which sector is under it
+      // In the initial position:
+      // - YES is in the top half (0-180 degrees)
+      // - NO is in the bottom half (180-360 degrees)
+
+      // After rotation, we need to see what sector the pointer (at top) is pointing to
+      // If the wheel rotated clockwise by X degrees, the content that was at (-X) degrees is now at the pointer
+      // So we need to find what was originally at the position that's now under the pointer
+      const originalSectorAtPointer = (360 - normalizedAngle) % 360;
+      console.log("dong normalizedAngle:", normalizedAngle)
+      console.log("dong originalSectorAtPointer:", originalSectorAtPointer)
+
       // Determine if it's Yes or No
-      const isYes = (finalPosition >= 0 && finalPosition < 180);
+      // YES sector: from 270 degrees to 90 degrees (crossing 0 degrees)
+      // NO sector: from 90 degrees to 270 degrees
+      const isYes = originalSectorAtPointer > 270 || originalSectorAtPointer < 90;
       setResult(isYes ? 'YES' : 'NO');
       setSpinning(false);
       setSpinCount(spinCount + 1);
@@ -70,8 +92,8 @@ const YesNoWheel: React.FC<WheelProps> = ({ size = 300 }) => {
   const fontSize = actualSize * 0.15;
 
   return (
-    <div style={{ 
-      display: 'flex', 
+    <div style={{
+      display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',
       justifyContent: 'center',
@@ -79,7 +101,7 @@ const YesNoWheel: React.FC<WheelProps> = ({ size = 300 }) => {
       maxWidth: '100%'
     }}>
       {/* Wheel container with pointer */}
-      <div style={{ 
+      <div style={{
         position: 'relative',
         width: `${actualSize}px`,
         height: `${actualSize}px`,
@@ -98,9 +120,9 @@ const YesNoWheel: React.FC<WheelProps> = ({ size = 300 }) => {
           borderTop: '30px solid #333',
           zIndex: 10
         }}></div>
-        
+
         {/* Wheel */}
-        <div 
+        <div
           ref={wheelRef}
           style={{
             width: '100%',
@@ -125,8 +147,8 @@ const YesNoWheel: React.FC<WheelProps> = ({ size = 300 }) => {
             top: 0,
             transformOrigin: 'bottom center',
           }}></div>
-          
-          
+
+
           {/* YES text */}
           <div style={{
             position: 'absolute',
@@ -135,15 +157,15 @@ const YesNoWheel: React.FC<WheelProps> = ({ size = 300 }) => {
             transform: 'translate(-50%, -50%)',
             zIndex: 2
           }}>
-            <span style={{ 
-              fontSize: `${fontSize}px`, 
-              fontWeight: 'bold', 
+            <span style={{
+              fontSize: `${fontSize}px`,
+              fontWeight: 'bold',
               color: 'white',
             }}>
               YES
             </span>
           </div>
-          
+
           {/* NO text */}
           <div style={{
             position: 'absolute',
@@ -152,19 +174,19 @@ const YesNoWheel: React.FC<WheelProps> = ({ size = 300 }) => {
             transform: 'translate(-50%, -50%)',
             zIndex: 2
           }}>
-            <span style={{ 
-              fontSize: `${fontSize}px`, 
-              fontWeight: 'bold', 
-              color: 'white' 
+            <span style={{
+              fontSize: `${fontSize}px`,
+              fontWeight: 'bold',
+              color: 'white'
             }}>
               NO
             </span>
           </div>
         </div>
       </div>
-      
+
       {/* Spin button */}
-      <button 
+      <button
         onClick={spinWheel}
         disabled={spinning}
         style={{
@@ -182,7 +204,7 @@ const YesNoWheel: React.FC<WheelProps> = ({ size = 300 }) => {
       >
         {spinning ? 'Spinning...' : 'Spin the Wheel'}
       </button>
-      
+
       {/* Result display */}
       {result && (
         <div style={{
@@ -199,14 +221,14 @@ const YesNoWheel: React.FC<WheelProps> = ({ size = 300 }) => {
           {result}
         </div>
       )}
-      
+
       {/* Stats */}
       {spinCount > 0 && (
         <div style={{ marginTop: '20px', fontSize: '14px', color: '#666' }}>
           You've spun the wheel {spinCount} time{spinCount !== 1 ? 's' : ''}
         </div>
       )}
-      
+
       <style jsx>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(-10px); }
