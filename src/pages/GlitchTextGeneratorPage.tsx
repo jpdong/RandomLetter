@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from '../components/elements/NavBar';
 import Footer from '../components/elements/Footer';
 import SectionTitle from '../components/elements/SectionTitle';
+import MoreTools from '../components/elements/MoreTools';
 import Container from '../components/layout/Container';
 import Row from '../components/layout/Row';
 import Column from '../components/layout/Column';
@@ -117,6 +118,9 @@ const GlitchTextGeneratorPage: React.FC = () => {
       <div style={{ background: '#f7f9fb', minHeight: '100vh' }}>
         {/* Hero Section with Client Component */}
         <ResponsiveHero />
+        
+        {/* More Tools Section */}
+        <MoreTools currentPath="/glitch-text-generator" />
         
         {/* Features Section - Server Rendered */}
         <div style={{ background: '#fff', padding: '80px 0' }} id="features">
