@@ -17,31 +17,31 @@ const faqs = [
     answer: 'The Yes/No wheel is a simple decision-making tool that randomly selects either "Yes" or "No" when you spin it. It uses a fair algorithm to ensure each option has an equal 50% chance of being selected.',
   },
   {
-    question: 'Should I really make decisions based on the wheel?',
-    answer: 'The wheel is designed for entertainment and can be helpful for breaking decision paralysis on minor choices. For important life decisions, we recommend using it as a starting point for reflection rather than the final decision-maker.',
+    question: 'Should I really make decisions based on the Yes No wheel?',
+    answer: 'The Yes No wheel is designed for entertainment and can be helpful for breaking decision paralysis on minor choices. For important life decisions, we recommend using it as a starting point for reflection rather than the final decision-maker.',
   },
   {
-    question: 'Is the wheel truly random?',
-    answer: 'Yes, our wheel uses JavaScript\'s Math.random() function to generate unpredictable results. Each spin has an equal chance of landing on "Yes" or "No" regardless of previous spins.',
+    question: 'Is the Yes No wheel truly random?',
+    answer: 'Yes, our Yes No wheel uses JavaScript\'s Math.random() function to generate unpredictable results. Each spin has an equal chance of landing on "Yes" or "No" regardless of previous spins.',
   },
   {
-    question: 'Can I customize the wheel with more options?',
-    answer: 'Currently, the wheel is designed for binary Yes/No decisions. We\'re working on a customizable version that will allow you to add your own options in the future.',
+    question: 'Can I customize the Yes No wheel with more options?',
+    answer: 'Currently, the Yes No wheel is designed for binary Yes/No decisions. We\'re working on a customizable version that will allow you to add your own options in the future.',
   },
 ];
 
 const useCases = [
   {
     title: 'Break Decision Paralysis',
-    description: 'When you\'re stuck between two equally appealing options, the wheel can help you move forward rather than remaining stuck in indecision.'
+    description: 'When you\'re stuck between two equally appealing options, the Yes No wheel can help you move forward rather than remaining stuck in indecision.'
   },
   {
     title: 'Fun Party Game',
-    description: 'Use the wheel at parties or gatherings to make random decisions like who goes first in a game or which activity to do next.'
+    description: 'Use the Yes No wheel at parties or gatherings to make random decisions like who goes first in a game or which activity to do next.'
   },
   {
     title: 'Creative Prompts',
-    description: 'Writers and artists can use the wheel to make random decisions about plot points, character traits, or artistic directions when feeling stuck.'
+    description: 'Writers and artists can use the Yes No wheel to make random decisions about plot points, character traits, or artistic directions when feeling stuck.'
   }
 ];
 
@@ -196,7 +196,7 @@ const YesNoWheelPage: React.FC = () => {
         {/* FAQ Section - Server Rendered */}
         <div style={{ background: '#f9f9f9', padding: '80px 0' }} id="faq">
           <Container>
-            <SectionTitle>Frequently Asked Questions</SectionTitle>
+            <SectionTitle>Frequently Asked Questions About Yes No Wheel</SectionTitle>
             <div style={{ maxWidth: 800, margin: '0 auto' }}>
               {faqs.map(f => (
                 <div key={f.question} style={{ marginBottom: 30, padding: 20, background: '#fff', borderRadius: 10, boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>

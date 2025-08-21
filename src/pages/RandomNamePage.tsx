@@ -17,15 +17,15 @@ const faqs = [
   },
   {
     question: 'How can I use randomly generated names?',
-    answer: 'Random names are perfect for creative writing, character development in stories or games, placeholder names in design mockups, testing software applications, or even brainstorming baby names!',
+    answer: 'Random name generator are perfect for creative writing, character development in stories or games, placeholder names in design mockups, testing software applications, or even brainstorming baby names!',
   },
   {
     question: 'Are the generated names real people?',
-    answer: 'No, our generator creates fictional names by combining common first and last names. Any resemblance to real persons is coincidental. The names are randomly generated and not connected to real identities.',
+    answer: 'No, our random name generator creates fictional names by combining common first and last names. Any resemblance to real persons is coincidental. The names are randomly generated and not connected to real identities.',
   },
   {
     question: 'Can I use these names for my book/game/project?',
-    answer: 'Yes! The names generated are free to use in your creative projects. Since they are randomly generated combinations, they are not subject to copyright restrictions.',
+    answer: 'Yes! The random name generator are free to use in your creative projects. Since they are randomly generated combinations, they are not subject to copyright restrictions.',
   },
 ];
 
@@ -38,17 +38,17 @@ const testimonials = [
   {
     avatar: '/avatars/linda.jpg',
     name: 'Linda',
-    text: "I use this tool for my D&D campaigns to quickly generate NPCs. My players love the variety of names I come up with now!",
+    text: "I use this random name generator tool for my D&D campaigns to quickly generate NPCs. My players love the variety of names I come up with now!",
   },
   {
     avatar: '/avatars/sam.jpg',
     name: 'Sam',
-    text: 'As a UX designer, I need placeholder names all the time for mockups. This generator is simple and gives me exactly what I need without any fuss.',
+    text: 'As a UX designer, I need placeholder names all the time for mockups. This random name generator is simple and gives me exactly what I need without any fuss.',
   },
   {
     avatar: '/avatars/emily.jpg',
     name: 'Emily',
-    text: 'I teach creative writing, and my students use this tool to help overcome writer\'s block when developing characters. It\'s become an essential classroom resource!',
+    text: 'I teach creative writing, and my students use this random name generator tool to help overcome writer\'s block when developing characters. It\'s become an essential classroom resource!',
   },
 ];
 
@@ -187,7 +187,7 @@ const RandomNamePage: React.FC = () => {
         {/* FAQ Section - Server Rendered */}
         <div style={{ background: '#f9f9f9', padding: '80px 0' }} id="faq">
           <Container>
-            <SectionTitle>Frequently Asked Questions</SectionTitle>
+            <SectionTitle>Frequently Asked Questions About Random Name Generator</SectionTitle>
             <div style={{ maxWidth: 800, margin: '0 auto' }}>
               {faqs.map(f => (
                 <div key={f.question} style={{ marginBottom: 30, padding: 20, background: '#fff', borderRadius: 10, boxShadow: '0 2px 8px rgba(0,0,0,0.05)' }}>

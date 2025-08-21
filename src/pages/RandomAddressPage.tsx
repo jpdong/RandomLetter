@@ -20,11 +20,11 @@ const faqs = [
   },
   {
     question: 'What countries are supported?',
-    answer: 'Our generator supports major countries including the United States, United Kingdom, Canada, Australia, Germany, France, and Japan, with more countries being added regularly.',
+    answer: 'Our random address generator supports major countries including the United States, United Kingdom, Canada, Australia, Germany, France, and Japan, with more countries being added regularly.',
   },
   {
     question: 'How can I use these addresses?',
-    answer: 'Random addresses are useful for testing applications, form validation, educational purposes, creative writing, game development, and any scenario where you need realistic but fictional address data.',
+    answer: 'Random address generator are useful for testing applications, form validation, educational purposes, creative writing, game development, and any scenario where you need realistic but fictional address data.',
   },
 ];
 
@@ -32,12 +32,12 @@ const testimonials = [
   {
     avatar: '/avatars/alex.jpg',
     name: 'Alex',
-    text: 'Perfect for testing our e-commerce platform! The addresses look completely realistic and cover all the formatting we need to validate.',
+    text: 'Perfect for testing our e-commerce platform! The random address generator look completely realistic and cover all the formatting we need to validate.',
   },
   {
     avatar: '/avatars/linda.jpg',
     name: 'Linda',
-    text: 'As a web developer, this tool saves me hours when I need test data. The international address formats are spot-on!',
+    text: 'As a web developer, this random address generator tool saves me hours when I need test data. The international address formats are spot-on!',
   },
   {
     avatar: '/avatars/sam.jpg',
@@ -47,7 +47,7 @@ const testimonials = [
   {
     avatar: '/avatars/emily.jpg',
     name: 'Emily',
-    text: 'I use this for creative writing projects when I need authentic-sounding addresses from different countries. Simple and effective!',
+    text: 'I use this random address generator for creative writing projects when I need authentic-sounding addresses from different countries. Simple and effective!',
   },
 ];
 

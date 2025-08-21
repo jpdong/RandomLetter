@@ -42,22 +42,22 @@ const testimonials = [
   {
     avatar: '/avatars/alex.jpg',
     name: 'Alex',
-    text: 'As a cybersecurity professional, I appreciate the advanced options and real-time strength analysis. This tool generates truly secure passwords!',
+    text: 'As a cybersecurity professional, I appreciate the advanced options and real-time strength analysis. This password generator tool generates truly secure passwords!',
   },
   {
     avatar: '/avatars/linda.jpg',
     name: 'Linda',
-    text: 'The interface is incredibly intuitive. I love how it explains password strength and gives specific recommendations for improvement.',
+    text: 'The password generator interface is incredibly intuitive. I love how password generator explains password strength and gives specific recommendations for improvement.',
   },
   {
     avatar: '/avatars/sam.jpg',
     name: 'Sam',
-    text: 'Perfect for our team\'s security training. The visual feedback helps employees understand what makes passwords secure.',
+    text: 'Perfect for our team\'s security training. The password generator visual feedback helps employees understand what makes passwords secure.',
   },
   {
     avatar: '/avatars/emily.jpg',
     name: 'Emily',
-    text: 'I use this daily for client accounts. The advanced customization options are exactly what I need for different security requirements.',
+    text: 'I use password generator daily for client accounts. The advanced customization options are exactly what I need for different security requirements.',
   },
 ];
 
@@ -193,7 +193,7 @@ const PasswordGeneratorPage: React.FC = () => {
         {/* FAQ Section */}
         <div style={{ background: '#f8f9fa', padding: '80px 0' }} id="faq">
           <Container>
-            <SectionTitle>Frequently Asked Questions</SectionTitle>
+            <SectionTitle>Frequently Asked Questions About Password Generator</SectionTitle>
             <div style={{ maxWidth: 800, margin: '0 auto' }}>
               {faqs.map(f => (
                 <div key={f.question} style={{ 
@@ -229,7 +229,7 @@ const PasswordGeneratorPage: React.FC = () => {
         {/* Testimonials Section */}
         <div style={{ background: '#fff', padding: '80px 0' }} id="testimonials">
           <Container>
-            <SectionTitle>What Security Professionals Say</SectionTitle>
+            <SectionTitle>What Security Professionals Say About Password Generator</SectionTitle>
             <Row gutter={[30, 30]}>
               {testimonials.map(t => (
                 <Column xs={24} md={12} lg={6} key={t.name}>

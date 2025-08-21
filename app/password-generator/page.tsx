@@ -2,13 +2,13 @@ import PasswordGeneratorPage from '../../src/pages/PasswordGeneratorPage'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Secure Password Generator - Create Strong Random Passwords | Random Letter',
+  title: 'Password Generator - Create Strong Random Passwords',
   description: 'Generate strong, secure passwords with our advanced password generator. Customize length, character types, and security settings for maximum protection.',
   alternates: {
     canonical: 'https://randomletter.net/password-generator',
   },
   openGraph: {
-    title: 'Secure Password Generator - Create Strong Random Passwords',
+    title: 'Password Generator - Create Strong Random Passwords',
     description: 'Generate strong, secure passwords with our advanced password generator. Customize length, character types, and security settings for maximum protection.',
     url: 'https://randomletter.net/password-generator',
     siteName: 'Random Letter Generator',
