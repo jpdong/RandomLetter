@@ -67,11 +67,33 @@ const PasswordGeneratorPage: React.FC = () => {
       <PasswordGeneratorStructuredData />
       <NavBar />
       <div style={{ background: '#f7f9fb', minHeight: '100vh' }}>
-        {/*/!* Hero Section *!/*/}
-        {/*<ResponsiveHero />*/}
+        {/* Page Title */}
+        <div style={{ padding: '40px 0 20px 0', textAlign: 'center' }}>
+          <Container>
+            <h1 style={{
+              fontSize: 'clamp(2rem, 4vw, 2.5rem)',
+              fontWeight: '700',
+              color: '#2c3e50',
+              margin: '0 0 8px 0',
+              letterSpacing: '-0.02em'
+            }}>
+              🔐 Password Generator
+            </h1>
+            <p style={{
+              fontSize: '1.1rem',
+              color: '#64748b',
+              margin: 0,
+              maxWidth: '600px',
+              marginLeft: 'auto',
+              marginRight: 'auto'
+            }}>
+              Generate ultra-secure passwords with advanced customization options
+            </p>
+          </Container>
+        </div>
 
         {/* Password Generator Tool */}
-        <div style={{ padding: '80px 0' }} id="generator">
+        <div style={{ padding: '0 0 80px 0' }} id="generator">
           <Container>
             <Row style={{ justifyContent: 'center' }}>
               <Column xs={24} lg={20}>
