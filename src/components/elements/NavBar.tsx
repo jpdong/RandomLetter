@@ -15,10 +15,11 @@ const NavBar: React.FC = () => (
         <nav>
           <ul className="nav">
             <li><Link href="/">Home</Link></li>
-            <li><Link href="/random-name-generator">Random Names</Link></li>
-            <li><Link href="/random-address-generator">Random Address</Link></li>
+            <li><Link href="/password-generator">Password</Link></li>
+            <li><Link href="/random-name-generator">Names</Link></li>
+            <li><Link href="/random-address-generator">Address</Link></li>
             <li><Link href="/yes-no-wheel">Yes/No Wheel</Link></li>
-            <li><Link href="/glitch-text-generator">Glitch Text Generator</Link></li>
+            <li><Link href="/glitch-text-generator">Glitch Text</Link></li>
             <li><Link href="/contact">Contact</Link></li>
           </ul>
         </nav>
@@ -49,10 +50,11 @@ const NavBar: React.FC = () => (
       </div>
       <ul>
         <li><Link href="/">Home</Link></li>
-        <li><Link href="/random-name-generator">Random Names</Link></li>
-        <li><Link href="/random-address-generator">Random Address</Link></li>
+        <li><Link href="/password-generator">Password</Link></li>
+        <li><Link href="/random-name-generator">Names</Link></li>
+        <li><Link href="/random-address-generator">Address</Link></li>
         <li><Link href="/yes-no-wheel">Yes/No Wheel</Link></li>
-        <li><Link href="/glitch-text-generator">Glitch Text Generator</Link></li>
+        <li><Link href="/glitch-text-generator">Glitch Text</Link></li>
         <li><Link href="/contact">Contact</Link></li>
       </ul>
     </nav>

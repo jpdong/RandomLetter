@@ -23,6 +23,13 @@ const tools: Tool[] = [
     gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
   },
   {
+    title: 'Password Generator',
+    description: 'Create ultra-secure passwords with advanced customization and real-time strength analysis.',
+    icon: '🔐',
+    href: '/password-generator',
+    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
+  },
+  {
     title: 'Random Name Generator',
     description: 'Create realistic names from different cultures and regions for characters, projects, or testing.',
     icon: '👤',
